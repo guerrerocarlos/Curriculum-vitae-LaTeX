@@ -1,0 +1,133 @@
+\documentclass{scrartcl}	% classe article di KOMA
+%http://www.cv-templates.info/2009/10/classicthesis-currvita-latex-cv-template/
+\reversemarginpar
+\newcommand{\MarginDate}[1]{\marginpar{\raggedleft\itshape\small#1}}
+%\usepackage[latin1]{inputenc}	% la codifica di input
+%\usepackage[T1]{fontenc}	% la codifica dei font
+\usepackage[LabelsAligned]{currvita}	% un buon pacchetto per CV
+\usepackage[nochapters]{classicthesis} % stile ClassicThesis
+\usepackage{url}	% per gli indirizzi Internet
+\usepackage[utf8]{inputenc}
+\renewcommand{\cvheadingfont}{\LARGE\color{Blue}}
+\renewcommand{\cvlistheadingfont}{\large}
+\renewcommand{\cvlabelfont}{\qquad}
+%Setup hyperref package, and colours for links, text and headings
+\usepackage{hyperref}		
+\hypersetup{	colorlinks,breaklinks,
+			urlcolor=Blue, 
+			linkcolor=Blue}
+\usepackage{eurosym}
+\newlength{\datebox}\settowidth{\datebox}{Summer 2007}
+
+\newcommand{\NewWorkExperience}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\textit{#1}}\hspace{1.5em} #2 #3%
+\vspace{0.5em}}
+
+\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize}
+\newcommand{\Sep}{\vspace{2em}}
+\begin{document}
+\thispagestyle{empty}
+\begin{cv}{\spacedallcaps{Carlos A. Guerrero M.}}
+
+\spacedlowsmallcaps{Informacion Personal}
+
+\NewWorkExperience{origen}{San Cristóbal, Venezuela}{$\cdotp$ 25 Octubre 1984}
+
+\NewWorkExperience{correo}{\href{mailto:contact@carlosguerrero.com}{contact@carlosguerrero.com}}{}
+
+\NewWorkExperience{skype}{gnuwarrior}{}
+
+\NewWorkExperience{info}{\href{http://www.carlosguerrero.com}{www.carlosguerrero.com}}{}
+
+\NewWorkExperience{blog}{\href{http://blog.carlosguerrero.com}{blog.carlosguerrero.com}}{}
+
+\NewWorkExperience{github}{\href{http://github.com/guerrerocarlos}{github.com/guerrerocarlos}}{}
+
+\NewWorkExperience{gitorious}{\href{http://gitorious.org/~guerrerocarlos}{gitorious.org/$\sim$guerrerocarlos}}{}
+
+\Sep
+\noindent\spacedlowsmallcaps{Experiencia Laboral}
+\vspace{0.5em}
+
+\NewWorkExperience{Actualmente}{\textbf{Brightcomms} $\cdotp$}{Nicaragua.}
+
+\Description{\MarginDate{Desarrollo en Python \& Django}Extracción de logs desde bases de datos Sybase a Postgres, usadas para brindar servicios de telecomunicaciones, para su posterior procesamiento, análisis y visualización, en diferentes tipos de tablas y gráficos. Generación de reportes en HTML y PDF, con entrega por via web o correo electrónico. Interfaz administrativa sencilla con creación de KPIs y reportes personalizados. Debido al alto volumen de datos, varios metodos de optimización fueron implementados. (librerias web: jQuery, jQuery-ui).}
+\Sep
+\NewWorkExperience{2008--2011}{\textbf{CNTI} $\cdotp$}{Venezuela.}
+
+\Description{\MarginDate{Desarrollo y Administración GNU/Linux}Integración de tecnologías libres para su uso en el Sistema Operativo a ser usado en la Administración Pública de Venezuela (Canaima GNU/Linux). Convirtiéndose en base tecnologica para muchos proyectos sociotecnológicos del país como -Canaima Educativo- que otorga una laptop a cada niño en la educación primaria, lleno con software libre educativo. Impulsado por el Centro Nacional de Tecnologías de Información (CNTI) orientado al desarrollo tecnológico y la comunidad de software libre. Basado en Debian. (Python, Bash, pyGTK, Django, Xen)}
+\Description{\textit{\textbf{Animación 3D con Blender}}\ \ $\cdotp$\ \ \MarginDate{Cursos Dictados} Taller Básico Intensivo  $\cdotp$ Realización de Presentaciones 3D $\cdotp$ Duración: 1 Semana $\cdotp$ Lugar: \textbf{Academia de Software Libre} }
+\Description{\textit{\textbf{Blender Avanzado}}\ \ $\cdotp$\ \ \MarginDate{} Taller Avanzado Intensivo  $\cdotp$ Edición y Post-producción $\cdotp$ Duración: 1 Semana $\cdotp$ Lugar: \textbf{Academia de Software Libre} }
+\Description{\textit{\textbf{Python Básico}}\ \ $\cdotp$\ \ \MarginDate{} Taller Básico de programación rápida con Python $\cdotp$ Introducción General $\cdotp$ Duración: 3 días $\cdotp$ Lugar: \textbf{Academia de Software Libre} }
+
+\Sep
+\NewWorkExperience{2007--2008}{\textbf{Huawei Technologies} $\cdotp$}{Venezuela.}
+
+\Description{\MarginDate{Pasantías \& Ingenierías de Diseño e Instalación}Pasantías de 6 meses, y luego Ingeniero de EDD (Engineering Design Department) realizando Site Surveys por todo el país junto con supervición y diseño de ingenierías para la implementación de la red UMTS para el proveedor de servicios de telecomunicaciones: Movilnet.}
+
+\vspace{1.5em}
+
+\spacedlowsmallcaps{Educacion Formal}
+\vspace{0.5em}
+
+\NewWorkExperience{2011}{\textbf{Academia de Software Libre} $\cdotp$}{Caracas, VE}
+\Description{\newline \textit{\textbf{Python Avanzado I}}\ \ $\cdotp$\ \  Tópicos: \MarginDate{Programación en Python}Virtualenv, sistemas de control de versiones, documentación, reStructured, Frameworks Web, Django, Bases de datos, Librerias GUI, Iteradores, Generadores, Decoradores, Unittest.}
+\vspace{0.5em}
+\NewWorkExperience{2010}{\textbf{Academia de Software Libre} $\cdotp$}{Caracas, VE}
+
+\Description{\textit{\textbf{Kit de Servicios}}\ \ $\cdotp$\ \  Tópicos: \MarginDate{Administrador de Sistemas}Virtualización Xen, OpenLDAP, PAM, OpenVPN, Postfix, NTP, DNS, Apache, Vhosts, Samba. }
+\vspace{0.5em}
+
+\NewWorkExperience{2010}{\textbf{Academia de Software Libre} $\cdotp$}{Caracas, VE}
+
+\Description{\textit{\textbf{CCNA}}\ \ $\cdotp$\ \  Tópicos: \MarginDate{Administrador de Redes}Manejo de Routers y Switch de gama Media, WAN, IP, EIGRP, Frame Relay, RIPv2, VLANs, Ethernet, listas de control de acceso.}
+
+\vspace{0.5em}
+\NewWorkExperience{2007}{\textbf{Universidad del Táchira} $\cdotp$}{San Cristóbal, VE}
+
+\Description{\textit{\textbf{Ingeniero en Electrónica}}\ \ $\cdotp$\ \  Automatización de procesos\MarginDate{Ingeniería}, fuertes bases en física y matematicas química, física, idiomas y inglés. $\cdotp$ Desarrollo e implementación de nuevas tecnologías $\cdotp$  Adaptación de la electrónica para la generación de soluciones integrales $\cdotp$  Pensamiento lógico y abstracto $\cdotp$ Orientación al Logro $\cdotp$ Proactivo, y facilidad para el trabajo en equipo.}
+
+
+\vspace{1.5em}
+
+\spacedlowsmallcaps{Informacion Adicional}
+
+\vspace{0.5em}
+
+
+\Description{Desde 2003 $\cdotp$ \MarginDate{Activista del Conocimiento Libre} Miembro del Grupo de Usuarios del Linux del Táchira}
+\Description{\textsc{Evento:} FLISOL \textit{San Cristóbal} $\cdotp$\ \ (2005) \ Comite Organizador}
+\Description{\textsc{Evento:} FLISOL \textit{San Cristóbal} $\cdotp$\ \ (2006) \ Comite Organizador}
+\Description{Desde 2008$\cdotp$ Desarrollador para \textit{Canaima GNU/Linux}}
+\Description{\textsc{Evento:} Congreso Nacional de Software Libre \textit{Caracas} $\cdotp$\ \ (2008) \ Ponencia: Desarrollo en GNU/Linux}
+\Description{\textsc{Evento:} FLISOL \textit{San Cristóbal} $\cdotp$\ \ (2009) \ Ponencia: Canaima GNU/Linux}
+\Description{\textsc{Evento:} Congreso Nacional de Software Libre \textit{Táchira} $\cdotp$\ \ (2010) \ Ponencia: Canaima GNU/Linux}
+\Description{\textsc{Evento:} FLISOL \textit{San Cristóbal} $\cdotp$\ \ (2010) \ Ponencia: Canaima GNU/Linux}
+\Description{\textsc{Evento:} Congreso Nacional de Software Libre \textit{Táchira} $\cdotp$\ \ (2011) \ Ponencia: Canaima GNU/Linux}
+
+\vspace{1em}
+\Description{\MarginDate{Websites Desarrollados}\textsc{\href{Http://Tienditas.net/}{\textbf{Http://Tienditas.net/}} } \newline Plataforma de creación automatica de tiendas online. Integración con Facebook y Twitter.\newline \textit{librerias: Django,jQuery} $\cdotp$\ \ 2011\newline}
+
+\Description{\textsc{\href{Http://planeta.canaima.softwarelibre.gob.ve/}{\textbf{Http://planeta.canaima.softwarelibre.gob.ve/}}} \newline Agregador de articulos publicados en los blogs de la comunidad de Canaima GNU/Linux, con robot de publicación de articulos @canaimagnulinux.\newline código-fuente: \href{https://gitorious.org/plataforma-canaima/planeta-canaima}{https://gitorious.org/plataforma-canaima/planeta-canaima} \newline \textit{Django,libturpial} $\cdotp$\ \ 2011\newline}
+
+\Description{\textsc{\href{Http://Tecnoguardian.com/}{\textbf{Http://Tecnoguardian.com/}}} \newline Agregador de noticias en tecnología, con robot de publicación de noticias por twitter: @tecnoguardian.\newline \textit{Django,libturpial,jQuery,HTML5} $\cdotp$\ \ 2010\newline}
+
+\Description{\textsc{\href{Http://notas.canaima.softwarelibre.gob.ve/}{\textbf{Http://notas.canaima.softwarelibre.gob.ve/}}} \newline Aplicación online integrada con una de escritorio, que permite la compartición de notas y anotaciones, para facilitar el soporte tecnico.\newline código: \href{https://gitorious.org/plataforma-canaima/notas}{https://gitorious.org/plataforma-canaima/notas}  \newline código-escritorio: \href{https://gitorious.org/plataforma-canaima/canaima-notas}{https://gitorious.org/plataforma-canaima/canaima-notas} \newline \textit{Django,pyGTK} $\cdotp$\ \ 2010\newline}
+
+\Description{\textsc{\href{Http://CarlosGuerrero.com/}{\textbf{Http://CarlosGuerrero.com/}}} \newline Portafolio online y portal de contacto.\newline \textit{HTML5} $\cdotp$\ \ 2009\newline}
+
+\newlength{\langbox}
+\settowidth{\langbox}{English}
+
+\vspace{0.5em}
+
+\Description{\parbox{\langbox}{\textsc{Inglés}}\ \ $\cdotp$\ \  \ Fluido}
+\MarginDate{Idiomas}
+\vspace{0.5em}
+
+\Description{\parbox{\langbox}{\textsc{Español}}\ \ $\cdotp$\ \ \  Idioma Materno}
+\vspace{1em}
+
+\Description{\LaTeX\ \MarginDate{Intereses}\  $\cdotp$\ Filosofía del software Libre y el conocimiento Libre $\cdotp$\ Estilos gráficos\ $\cdotp$\ Programación\ $\cdotp$\ Diseño Gráfico \ $\cdotp$\ Desarrollo web y Diseño\ $\cdotp$\ Hardware Libre \ $\cdotp$\ PinguinoVE \ $\cdotp$\ Diseño 3D\& Animación \ $\cdotp$ \ Blender  \ $\cdotp$ \ Artes Gráficas \ $\cdotp$ \ Presentación de data e información\ $\cdotp$ Fotografía \ $\cdotp$ \ Programación de alto desempeño y funcionalidad}
+\enlargethispage{\baselineskip}
+\end{cv}
+\end{document}
